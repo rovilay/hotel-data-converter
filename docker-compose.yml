@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  tool:
+    volumes:
+      - ./share/files:/app/share/files
+      - ./share/results:/app/share/results
+    env_file:
+      - .env
+    environment: 
+      FILE: ${FILE}
+    build: .
